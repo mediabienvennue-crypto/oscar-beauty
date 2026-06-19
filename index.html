@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centre Beauty Oscar - Salon de Beauté VIP à Casablanca</title>
     <!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://tailwindcss.com"></script>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
 </head>
 <body class="bg-[#FAF8F5] text-[#333333] antialiased overflow-x-hidden">
 
-    <!-- 1️⃣ تقنية الاستعجال: شريط العداد التنازلي الحي (Urgency Countdown) -->
+    <!-- 1️⃣ شريط العداد التنازلي الحي (Urgency Countdown) -->
     <div class="bg-[#D4AF37] text-white text-xs md:text-sm font-semibold py-2 px-4 text-center tracking-wide sticky top-0 z-50 shadow-md flex justify-center items-center gap-2">
         <span>🔥 OFFRES FLASH ÉTÉ : Il vous reste</span>
         <span id="countdown-timer" class="font-mono bg-white text-[#D4AF37] px-2 py-0.5 rounded shadow">02h 14m 05s</span>
@@ -28,13 +28,22 @@
     </div>
 
     <!-- الشريط العلوي والتنقل (Navbar) -->
-    <nav class="bg-white/90 backdrop-blur-md border-b border-gray-100 py-4 px-6 md:px-12 flex justify-between items-center z-40">
+    <nav class="bg-white/90 backdrop-blur-md border-b border-gray-100 py-4 px-6 md:px-12 flex justify-between items-center z-40 relative">
         <div class="text-xl md:text-2xl font-bold font-serif tracking-wider text-gold">CENTRE OSCAR</div>
         <div class="hidden md:flex gap-8 font-medium text-sm text-gray-600">
             <a href="#offres" class="hover:text-gold transition">Nos Offres</a>
-            <a href="#menu" class="hover:text-gold transition">Tarifs</a>
-               <!-- 2️⃣ قسم الـ Hero (الانتباه والرغبة عبر نصوص AIDA وصورة الصالون الحقيقية) -->
-    <section class="relative min-h-[85vh] flex items-center justify-center bg-cover bg-center px-6" style="background-image: linear-gradient(rgba(250, 248, 245, 0.88), rgba(250, 248, 245, 0.93)), url('https://pexels.com');">
+            <a href="#reviews" class="hover:text-gold transition">Avis Clients</a>
+            <a href="#contact" class="hover:text-gold transition">Contact</a>
+        </div>
+        <a href="https://whatsapp.com." 
+           target="_blank"
+           class="bg-[#D4AF37] hover:bg-[#bfa032] text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition shadow-sm">
+            Réserver Direct
+        </a>
+    </nav>
+
+    <!-- 2️⃣ قسم الـ Hero (الانتباه والرغبة عبر نصوص AIDA وصورة الصالون الحقيقية) -->
+    <section id="hero" class="relative min-h-[85vh] flex items-center justify-center bg-cover bg-center px-6" style="background-image: linear-gradient(rgba(250, 248, 245, 0.88), rgba(250, 248, 245, 0.93)), url('https://pexels.com');">
         <div class="max-w-4xl text-center z-10">
             <span class="text-gold font-bold tracking-widest text-xs uppercase bg-gold/10 px-4 py-1.5 rounded-full inline-block mb-4">✨ Le Secret de l'Élégance à l'Oulfa</span>
             <h1 class="text-4xl md:text-6xl font-serif font-bold tracking-tight text-gray-900 leading-tight mb-6">
@@ -43,20 +52,7 @@
             <p class="text-base md:text-lg text-gray-600 max-w-2xl mx-auto mb-8 leading-relaxed">
                 Offrez-vous un moment de pure détente entre les mains de nos expertes au Haj Fath. Des soins d'exception et des tarifs exclusifs pensés pour sublimer votre féminité.
             </p>
-            <div class="inline-block animate-bounce mb-2 text-gold">👇 Cliquez pour saisir la promo</div>
-            <div>
-                <a href="#offres" class="bg-gray-900 hover:bg-black text-white font-bold px-8 py-4 rounded-full text-sm uppercase tracking-wider shadow-xl transition-all duration-300 inline-block transform hover:scale-105 border border-transparent hover:border-gold">
-                    Découvrir Les Packs Promo ➔
-                </a>
-            </div>
-        </div>
-    </section>
-
-            </h1>
-            <p class="text-base md:text-lg text-gray-600 max-w-2xl mx-auto mb-8 leading-relaxed">
-                Offrez-vous un moment de pure détente entre les mains de nos expertes au Haj Fath. Des soins d'exception et des tarifs exclusifs pensés pour sublimer votre féminité.
-            </p>
-            <div class="inline-block animate-bounce mb-2 text-gold">👇 Cliquez pour saisir la promo</div>
+            <div class="inline-block animate-bounce mb-2 text-gold text-sm font-semibold">👇 Cliquez pour saisir la promo</div>
             <div>
                 <a href="#offres" class="bg-gray-900 hover:bg-black text-white font-bold px-8 py-4 rounded-full text-sm uppercase tracking-wider shadow-xl transition-all duration-300 inline-block transform hover:scale-105 border border-transparent hover:border-gold">
                     Découvrir Les Packs Promo ➔
@@ -131,7 +127,7 @@
         </div>
     </section>
 
-       <!-- 4️⃣ نافذة الـ Upsell والـ Cross-sell الذكية -->
+    <!-- 4️⃣ نافذة الـ Upsell والـ Cross-sell الذكية -->
     <div id="upsell-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 transition-all duration-300">
         <div class="bg-white rounded-3xl max-w-md w-full p-6 text-center shadow-2xl border border-gray-100 transform scale-95 transition-all duration-300">
             <span class="text-2xl">🎁</span>
@@ -148,46 +144,3 @@
             </div>
 
             <div class="space-y-2">
-                <button id="upsell-accept-btn" class="w-full py-3.5 rounded-xl bg-[#D4AF37] text-white font-bold text-sm hover:bg-[#bfa032] transition duration-300 shadow-md">
-                    Oui, J'ajoute l'offre VIP ➔
-                </button>
-                <button id="upsell-decline-btn" class="w-full py-2.5 rounded-xl text-gray-400 hover:text-gray-600 font-semibold text-xs transition">
-                    Non merci, je reste sur l'offre de base
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        let currentSelectedPack = "";
-        let currentSelectedPrice = 0;
-
-        function openUpsellModal(packName, price) {
-            currentSelectedPack = packName;
-            currentSelectedPrice = price;
-            const modal = document.getElementById('upsell-modal');
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-        }
-
-        function closeUpsellModal() {
-            const modal = document.getElementById('upsell-modal');
-            modal.classList.remove('flex');
-            modal.classList.add('hidden');
-        }
-
-        document.getElementById('upsell-accept-btn').addEventListener('click', () => {
-            const finalPrice = currentSelectedPrice + 99;
-            const message = `Bonjour Centre Oscar, je souhaite réserver l'offre complète : ${currentSelectedPack} + l'option Soin Visage Hydratant Flash pour un total de ${finalPrice} DH (Prix Promo).`;
-            window.open(`https://whatsapp.com{encodeURIComponent(message)}`, '_blank');
-            closeUpsellModal();
-        });
-
-        document.getElementById('upsell-decline-btn').addEventListener('click', () => {
-            const message = `Bonjour Centre Oscar, je souhaite réserver l'offre de base : ${currentSelectedPack} au tarif promo de ${currentSelectedPrice} DH.`;
-            window.open(`https://whatsapp.com{encodeURIComponent(message)}`, '_blank');
-            closeUpsellModal();
-        });
-    </script>
-</body>
-</html>
