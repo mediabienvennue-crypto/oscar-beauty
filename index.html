@@ -4,85 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centre Beauty Oscar - Salon de Beauté VIP à Casablanca</title>
-    <!-- Tailwind CSS -->
-    <script src="https://tailwindcss.com"></script>
+    <!-- رابط تشغيل مدمج ومستقر لـ Tailwind CSS لمنع الحظر -->
+    <link href="https://cloudflare.com" rel="stylesheet">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Montserrat', sans-serif; }
+        body { font-family: 'Montserrat', sans-serif; background-color: #FAF8F5; }
         .font-serif { font-family: 'Playfair Display', serif; }
         .bg-gold { background-color: #D4AF37; }
         .text-gold { color: #D4AF37; }
         .border-gold { border-color: #D4AF37; }
+        .bg-cream { background-color: #FAF8F5; }
     </style>
 </head>
-<body class="bg-[#FAF8F5] text-[#333333] antialiased overflow-x-hidden">
+<body class="bg-cream text-gray-800 antialiased overflow-x-hidden">
 
-    <!-- 1️⃣ شريط العداد التنازلي الحي (Urgency Countdown) -->
-    <div class="bg-[#D4AF37] text-white text-xs md:text-sm font-semibold py-2 px-4 text-center tracking-wide sticky top-0 z-50 shadow-md flex justify-center items-center gap-2">
+    <!-- 1️⃣ شريط العداد التنازلي الحي -->
+    <div class="bg-gold text-white text-xs md:text-sm font-semibold py-2 px-4 text-center sticky top-0 z-50 shadow-md flex justify-center items-center gap-2">
         <span>🔥 OFFRES FLASH ÉTÉ : Il vous reste</span>
-        <span id="countdown-timer" class="font-mono bg-white text-[#D4AF37] px-2 py-0.5 rounded shadow">02h 14m 05s</span>
+        <span id="countdown-timer" class="font-mono bg-white text-gold px-2 py-0.5 rounded shadow mx-1">02h 14m 05s</span>
         <span>pour profiter de "L'Hawta" !</span>
     </div>
 
     <!-- الشريط العلوي والتنقل (Navbar) -->
-    <nav class="bg-white/90 backdrop-blur-md border-b border-gray-100 py-4 px-6 md:px-12 flex justify-between items-center z-40 relative">
+    <nav class="bg-white border-b border-gray-100 py-4 px-6 md:px-12 flex justify-between items-center z-40 relative">
         <div class="text-xl md:text-2xl font-bold font-serif tracking-wider text-gold">CENTRE OSCAR</div>
-        <div class="hidden md:flex gap-8 font-medium text-sm text-gray-600">
-            <a href="#offres" class="hover:text-gold transition">Nos Offres</a>
-            <a href="#reviews" class="hover:text-gold transition">Avis Clients</a>
-            <a href="#contact" class="hover:text-gold transition">Contact</a>
+        <div class="hidden md:flex space-x-8 font-medium text-sm text-gray-600">
+            <a href="#offres" class="hover:text-gold transition mx-2">Nos Offres</a>
+            <a href="#reviews" class="hover:text-gold transition mx-2">Avis Clients</a>
+            <a href="#contact" class="hover:text-gold transition mx-2">Contact</a>
         </div>
         <a href="https://whatsapp.com." 
            target="_blank"
-           class="bg-[#D4AF37] hover:bg-[#bfa032] text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition shadow-sm">
+           class="bg-gold hover:bg-yellow-600 text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition shadow-sm">
             Réserver Direct
         </a>
     </nav>
 
-    <!-- 2️⃣ قسم الـ Hero (الانتباه والرغبة عبر نصوص AIDA وصورة الصالون الحقيقية) -->
-    <section id="hero" class="relative min-h-[85vh] flex items-center justify-center bg-cover bg-center px-6" style="background-image: linear-gradient(rgba(250, 248, 245, 0.88), rgba(250, 248, 245, 0.93)), url('https://pexels.com');">
-        <div class="max-w-4xl text-center z-10">
-            <span class="text-gold font-bold tracking-widest text-xs uppercase bg-gold/10 px-4 py-1.5 rounded-full inline-block mb-4">✨ Le Secret de l'Élégance à l'Oulfa</span>
-            <h1 class="text-4xl md:text-6xl font-serif font-bold tracking-tight text-gray-900 leading-tight mb-6">
+    <!-- 2️⃣ قسم الـ Hero (صورة الصالون الحقيقية مع تعديل شفافية الألوان لتظهر فخمة) -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center bg-cover bg-center px-6 py-20" style="background-image: linear-gradient(rgba(250, 248, 245, 0.88), rgba(250, 248, 245, 0.93)), url('https://pexels.com');">
+        <div class="max-w-4xl text-center z-10 mx-auto">
+            <span class="text-gold font-bold tracking-widest text-xs uppercase bg-yellow-100 px-4 py-1.5 rounded-full inline-block mb-4">✨ Le Secret de l'Élégance à l'Oulfa</span>
+            <h1 class="text-4xl md:text-6xl font-serif font-bold tracking-tight text-gray-900 mb-6">
                 Révélez Votre Éclat Sublime & Profitez d'une Expérience VIP
             </h1>
-            <p class="text-base md:text-lg text-gray-600 max-w-2xl mx-auto mb-8 leading-relaxed">
+            <p class="text-base md:text-lg text-gray-600 max-w-2xl mx-auto mb-8">
                 Offrez-vous un moment de pure détente entre les mains de nos expertes au Haj Fath. Des soins d'exception et des tarifs exclusifs pensés pour sublimer votre féminité.
             </p>
-            <div class="inline-block animate-bounce mb-2 text-gold text-sm font-semibold">👇 Cliquez pour saisir la promo</div>
+            <div class="text-gold text-sm font-semibold mb-2 animate-bounce">👇 Cliquez pour saisir la promo</div>
             <div>
-                <a href="#offres" class="bg-gray-900 hover:bg-black text-white font-bold px-8 py-4 rounded-full text-sm uppercase tracking-wider shadow-xl transition-all duration-300 inline-block transform hover:scale-105 border border-transparent hover:border-gold">
+                <a href="#offres" class="bg-gray-900 hover:bg-black text-white font-bold px-8 py-4 rounded-full text-sm uppercase tracking-wider shadow-xl transition inline-block transform hover:scale-105">
                     Découvrir Les Packs Promo ➔
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- 3️⃣ تقنية تثبيت السعر وهندسة الخيارات (Decoy Effect + Packs Promo) -->
+    <!-- 3️⃣ أقسام العروض (Decoy Effect + Packs Promo) -->
     <section id="offres" class="py-20 px-6 md:px-12 max-w-7xl mx-auto">
         <div class="text-center mb-16">
             <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">Nos Offres Flash : Économisez Plus, Rayonnez Mieux</h2>
             <p class="text-gray-500 max-w-xl mx-auto">Chaque formule est conçue pour maximiser votre satisfaction. Profitez des places limitées de cette semaine !</p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8 items-center">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
             <!-- الباقة الأولى -->
-            <div class="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm relative overflow-hidden transition hover:shadow-md">
+            <div class="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm relative overflow-hidden transition hover:shadow-md">
                 <h3 class="text-xl font-bold font-serif mb-2 text-gray-800">Pack Éclat Express</h3>
                 <p class="text-xs text-gray-400 mb-6">Pour une mise en beauté rapide et efficace</p>
-                <div class="flex items-baseline gap-2 mb-6">
-                    <span class="text-gray-400 line-through text-sm">350 DH</span>
+                <div class="flex items-baseline mb-6">
+                    <span class="text-gray-400 line-through text-sm mr-2">350 DH</span>
                     <span class="text-2xl font-bold text-gold">199 DH</span>
                 </div>
-                <ul class="space-y-3 text-sm text-gray-600 mb-8">
-                    <li>✓ Brushing Soyeux</li>
-                    <li>✓ Manucure Express</li>
-                    <li>✓ Pose Vernis Classique</li>
+                <ul class="space-y-3 text-sm text-gray-600 mb-8 list-none pl-0">
+                    <li class="mb-2">✓ Brushing Soyeux</li>
+                    <li class="mb-2">✓ Manucure Express</li>
+                    <li class="mb-2">✓ Pose Vernis Classique</li>
                 </ul>
-                <button onclick="openUpsellModal('Pack Éclat Express', 199)" class="w-full py-3 rounded-xl border border-gray-200 text-gray-700 font-semibold text-sm hover:bg-gold hover:text-white hover:border-gold transition duration-300">
+                <button onclick="openUpsellModal('Pack Éclat Express', 199)" class="w-full py-3 rounded-xl border border-gray-300 text-gray-700 font-semibold text-sm hover:bg-gold hover:text-white transition duration-300">
                     Réserver ce Pack
                 </button>
             </div>
@@ -92,14 +93,14 @@
                 <div class="absolute top-0 right-0 bg-gold text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1 rounded-bl-xl">Plus Populaire</div>
                 <h3 class="text-2xl font-bold font-serif mb-2 text-gray-900">Pack Détente Royale</h3>
                 <p class="text-xs text-gray-400 mb-6">L'expérience de relaxation absolue</p>
-                <div class="flex items-baseline gap-2 mb-6">
-                    <span class="text-gray-400 line-through text-base">600 DH</span>
+                <div class="flex items-baseline mb-6">
+                    <span class="text-gray-400 line-through text-base mr-2">600 DH</span>
                     <span class="text-4xl font-bold text-gold">349 DH</span>
                 </div>
-                <ul class="space-y-4 text-sm text-gray-700 font-medium mb-8">
-                    <li>✨ Hammam Beldi Traditionnel</li>
-                    <li>✨ Massage Relaxant aux Huiles (45min)</li>
-                    <li>✨ Soin Visage Éclat Hydratant</li>
+                <ul class="space-y-4 text-sm text-gray-700 font-medium mb-8 list-none pl-0">
+                    <li class="mb-2">✨ Hammam Beldi Traditionnel</li>
+                    <li class="mb-2">✨ Massage Relaxant aux Huiles (45min)</li>
+                    <li class="mb-2">✨ Soin Visage Éclat Hydratant</li>
                 </ul>
                 <button onclick="openUpsellModal('Pack Détente Royale', 349)" class="w-full py-4 rounded-xl bg-gray-900 text-white font-bold text-sm hover:bg-gold transition duration-300 shadow-md">
                     Profiter de l'Hawta ➔
@@ -107,20 +108,20 @@
             </div>
 
             <!-- الباقة الثالثة -->
-            <div class="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm relative overflow-hidden transition hover:shadow-md">
+            <div class="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm relative overflow-hidden transition hover:shadow-md">
                 <h3 class="text-xl font-bold font-serif mb-2 text-gray-800">Pack Événement VIP</h3>
                 <p class="text-xs text-gray-400 mb-6">Pour briller comme une reine lors de vos fêtes</p>
-                <div class="flex items-baseline gap-2 mb-6">
-                    <span class="text-gray-400 line-through text-sm">1500 DH</span>
+                <div class="flex items-baseline mb-6">
+                    <span class="text-gray-400 line-through text-sm mr-2">1500 DH</span>
                     <span class="text-2xl font-bold text-gold">899 DH</span>
                 </div>
-                <ul class="space-y-3 text-sm text-gray-600 mb-8">
-                    <li>✓ Coiffure Haute Couture (Chignon)</li>
-                    <li>✓ Maquillage Professionnel</li>
-                    <li>✓ Soin Mains & Pieds Premium</li>
-                    <li>✓ Faux Ongles Offerts</li>
+                <ul class="space-y-3 text-sm text-gray-600 mb-8 list-none pl-0">
+                    <li class="mb-2">✓ Coiffure Haute Couture (Chignon)</li>
+                    <li class="mb-2">✓ Maquillage Professionnel</li>
+                    <li class="mb-2">✓ Soin Mains & Pieds Premium</li>
+                    <li class="mb-2">✓ Faux Ongles Offerts</li>
                 </ul>
-                <button onclick="openUpsellModal('Pack Événement VIP', 899)" class="w-full py-3 rounded-xl border border-gray-200 text-gray-700 font-semibold text-sm hover:bg-gold hover:text-white hover:border-gold transition duration-300">
+                <button onclick="openUpsellModal('Pack Événement VIP', 899)" class="w-full py-3 rounded-xl border border-gray-300 text-gray-700 font-semibold text-sm hover:bg-gold hover:text-white transition duration-300">
                     Réserver la Haute Beauté
                 </button>
             </div>
@@ -128,19 +129,15 @@
     </section>
 
     <!-- 4️⃣ نافذة الـ Upsell والـ Cross-sell الذكية -->
-    <div id="upsell-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 transition-all duration-300">
-        <div class="bg-white rounded-3xl max-w-md w-full p-6 text-center shadow-2xl border border-gray-100 transform scale-95 transition-all duration-300">
+    <div id="upsell-modal" class="fixed inset-0 bg-black bg-opacity-60 z-50 hidden items-center justify-center p-4 transition-all duration-300" style="backdrop-filter: blur(4px);">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 text-center shadow-2xl border border-gray-100 transform transition-all duration-300 mx-auto">
             <span class="text-2xl">🎁</span>
             <h4 class="text-xl font-serif font-bold text-gray-900 mt-2 mb-1">Sublimez Votre Expérience !</h4>
             <p class="text-xs text-gray-400 px-4 mb-4">Offre exclusive disponible à cette étape de votre réservation.</p>
             
-            <div class="bg-[#FAF8F5] border border-dashed border-gold rounded-2xl p-4 mb-6 text-left">
+            <div class="bg-cream border border-dashed border-gold rounded-2xl p-4 mb-6 text-left">
                 <p class="text-sm font-bold text-gray-800 mb-1">Ajouter : Soin Visage Hydratant Flash</p>
                 <p class="text-xs text-gray-500 mb-2">Donnez à votre visage un coup d'éclat instantané en plus de votre pack.</p>
-                <div class="flex items-baseline gap-2">
-                    <span class="text-gray-400 line-through text-xs">200 DH</span>
+                <div class="flex items-baseline">
+                    <span class="text-gray-400 line-through text-xs mr-2">200 DH</span>
                     <span class="text-lg font-bold text-gold">+99 DH seulement</span>
-                </div>
-            </div>
-
-            <div class="space-y-2">
